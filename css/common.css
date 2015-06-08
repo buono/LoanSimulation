@@ -1,0 +1,117 @@
+body {
+  background: #fff;
+  margin: auto;
+}
+header {
+  display: flex;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 60px;
+}
+#top {
+  display: flex;
+  flex-direction: row;
+}
+#title {
+  font-size: 36px;
+  order: 2;
+  margin-top: 14px;
+}
+#title_01 {
+  font-family: "Myriad Pro";
+  font-weight: bold;
+  color: #9dc02e;
+}
+#title_02 {
+  font-family: "Adobe Caslon Pro";
+  color: #999999;
+}
+#logo {
+  width: 52px;
+  height: 52px;
+  order: 1;
+}
+#top {
+  margin-right: auto;
+}
+#top_img {
+  width: 100%;
+  padding-bottom: 1px;
+  margin-bottom: 8px;
+}
+.social {
+  margin: 30px 10px 10px 10px;
+}
+#description h1 {
+  font-Family: KozGoPr6N-Regular;
+  font-size: 22px;
+  Color: #494949;
+  Font-Style: normal;
+  Text-Align: center;
+  Line-Height: 36px;
+  Letter-Spacing: 0.01em;
+  Opacity: 1;
+  Effect: none;
+}
+#description img {
+  border: 2px solid #9dc02e;
+  padding: 20px 90px 0px 90px;
+  margin: 0px;
+  margin-right: 8px;
+  width: 370px;
+  height: 200px;
+}
+#desc_img {
+  display: flex;
+  text-align: center;
+}
+#desc_img h2 {
+  width: 360px;
+  position: relative;
+  top: 190px;
+  left: -100px;
+}
+#main {
+  margin-top: 98px;
+}
+#main span {
+  font-size: 30px;
+  margin-left: 20px;
+}
+.description {
+  position: relative;
+  left: 100px;
+}
+#main_02 {
+  margin-top: 48px;
+}
+.form-group label {
+  width: 150px;
+}
+#whole_result {
+  margin-bottom: 30px;
+}
+#whole_result tr:nth-child(1) {
+  background: #9dc02e;
+  color: #ffffff;
+  font-weight: bold;
+}
+#whole_result td {
+  padding: 7px;
+  border: 1px solid #cccccc;
+  text-align: center;
+}
+#chart_result tr:nth-child(1) {
+  background: #9dc02e;
+  color: #ffffff;
+  font-weight: bold;
+}
+#chart_result td {
+  padding: 7px;
+  border: 1px solid #cccccc;
+  text-align: center;
+}
+footer h1 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}

@@ -1,24 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
     <title>LoanSimulator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/common.css"/>
 </head>
 <body>
-<header>
+<div class="container">
+    <header>
+            <div id="top">
+                <h1 id="title"><span id="title_01">Loan</span><span id="title_02">Simulator</span></h1>
+                <img id="logo" src="img/top_logo.png" alt="LoanSimulator"/>
+            </div>
+        <p id="social">
 
-</header>
-<nav>
+        <!-- シェアボタンに変換される -->
+        <div class="fb-like social" data-href="http://syncer.jp" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 
-</nav>
-<section>
+        <!-- [head]内や、[body]の終了直前などに配置 -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
-</section>
-<section>
+        <!-- シェアボタンに変換される -->
+        <a class="twitter-share-button social" href="https://twitter.com/share" data-dnt="true">Tweet</a>
 
-</section>
-<footer>
-
-</footer>
+        <!-- [head]内や、[body]の終了直前などに配置 -->
+        <script>
+            window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+        </script>
+        </p>
+    </header>
+    <img id="top_img" src="img/top_img.jpg" alt="LoanSimulator"/>
+    <section id="description">
+        <h1>LoanSimulatorは、住宅ローンの条件を入力するだけで計算してグラフ化し、結果をシェアする事ができます。</h1>
+        <div id="desc_img">
+            <!--
+            <p><img src="img/top_calc.png" alt="calculation"/><h2>計算する</h2></p>
+            <p><img src="img/top_graph.png" alt="graph"/><h2>グラフ化する</h2></p>
+            <p><img src="img/top_share.png" alt="share"/><h2>シェアする</h2></p>
+            -->
+        </div>
+    </section>
+    <section id="main">
+        <div id="main_01">
+        <p><img src="img/top_flow01.png" /><span>条件を入力し、計算するボタンをクリックして下さい。</span></p>
+            <div class="description">
+                <form role="form" method="post">
+                    <div class="form-group">
+                        <label>借入金(万円)</label>
+                        <input class="input" name="kariirekin" id="kariirekin" type="text"/>
+                    </div>
+                    <div class="form-group">
+                        <label>借入期間(年)</label>
+                        <input class="input" name="kariirekikan" id="kariirekikan" type="text"/>
+                    </div>
+                    <div class="form-group">
+                        <label>金利(%)</label>
+                        <input class="input" name="kinri" id="kinri" type="text"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">金利タイプ</label>
+                            <select name="kinritype" id=""kinritype">
+                                <option value="motori_kinto"/>元利均等方式</option>
+                                <option value="motokin_kinto"/>元金均等方式</option>
+                            </select>
+                        </label>
+                    </div>
+                    <button type="button" id="calc_btn" class="btn btn-default">計算する</button>
+                    <button type="button" id="test_btn" class="btn btn-default">テスト</button>
+                </form>
+            </div>
+        </div>
+        <div id="main_02">
+            <p><img src="img/top_flow02.png" /><span>あなたのシミュレーション結果です。</span></p>
+            <div class="description">
+                <div id="graph"></div>
+                <div id="whole"></div>
+                <div id="chart"></div>
+            </div>
+        </div>
+        <!--
+        <div id="main_03">
+            <p><img src="img/top_flow03.png" /><span>結果をみんなにシェアしましょう。</span></p>
+        </div>
+        -->
+    </section>
+    <footer>
+        <h1>©2015 Buono</h1>
+    </footer>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript"
+        src="https://www.google.com/jsapi?autoload={
+            'modules':[{
+              'name':'visualization',
+              'version':'1',
+              'packages':['corechart', 'bar']
+            }]
+          }">
+</script>
+<script src="js/main.js"></script>
 </body>
 </html>
